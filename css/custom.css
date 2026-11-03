@@ -59,3 +59,17 @@ html[data-theme="dark"] #recent-posts .recent-post-item .recent-post-info > .art
 html[data-theme="dark"] #recent-posts .recent-post-item .recent-post-info > .article-title:hover {
   color: #FDA4AF;
 }
+
+/* =========================================================
+   夜晚模式：顶部大图 / 全站背景调亮
+   ========================================================= */
+
+/* 顶部大图：暗色下默认盖 60% 黑，降到 25%，图更亮 */
+html[data-theme="dark"] #page-header:not(.not-top-img):before {
+  background-color: rgba(0, 0, 0, .25) !important;
+}
+
+/* 全站背景图：暗色下默认盖 70% 黑，降到 35%，图更亮 */
+html[data-theme="dark"] #web_bg:before {
+  background-color: rgba(0, 0, 0, .35) !important;
+}
