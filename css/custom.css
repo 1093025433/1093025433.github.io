@@ -1,0 +1,61 @@
+/* =========================================================
+   首页大图标题排版
+   只影响首页 banner 上的站点标题 / 副标题，不改其他页面
+   ========================================================= */
+
+#page-header.full_page #site-title {
+  color: #C4B5FD;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: .06em;
+  line-height: 1.22;
+  text-wrap: balance;
+  text-shadow:
+    0 8px 32px rgba(0, 0, 0, .45),
+    0 2px 6px rgba(0, 0, 0, .30);
+}
+
+#page-header.full_page #site-subtitle {
+  margin-top: .75rem;
+  font-size: clamp(1rem, 1.5vw, 1.28rem);
+  font-weight: 500;
+  letter-spacing: .10em;
+  color: rgba(255, 255, 255, .92);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .42);
+}
+
+@media (max-width: 768px) {
+  #page-header.full_page #site-title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    letter-spacing: .04em;
+  }
+
+  #page-header.full_page #site-subtitle {
+    margin-top: .55rem;
+    font-size: .95rem;
+    letter-spacing: .06em;
+  }
+}
+
+/* =========================================================
+   首页文章卡片标题：玫红
+   只作用于首页卡片，不影响标签页 / 归档页 / 正文小标题
+   ========================================================= */
+
+#recent-posts .recent-post-item .recent-post-info > .article-title {
+  color: #BE123C;
+  transition: color .2s ease-in-out;
+}
+
+#recent-posts .recent-post-item .recent-post-info > .article-title:hover {
+  color: #9F1239;
+}
+
+/* 暗色模式下用更亮的玫红，保证在深色卡片上看得清 */
+html[data-theme="dark"] #recent-posts .recent-post-item .recent-post-info > .article-title {
+  color: #FB7185;
+}
+
+html[data-theme="dark"] #recent-posts .recent-post-item .recent-post-info > .article-title:hover {
+  color: #FDA4AF;
+}
